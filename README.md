@@ -421,6 +421,11 @@ Barack Obama
 
 #### 11. For every match involving 'POL', show the matchid, date and the number of goals scored.
 
+    SELECT matchid,mdate,COUNT(teamid)
+    FROM game JOIN goal ON matchid=id
+    WHERE teamid="POL" OR team1="POL" OR team2="POL"
+    GROUP BY matchid,mdate
+
 #### 12. For every match where 'GER' scored, show matchid, match date and the number of goals scored by 'GER'
 
 #### 13. List every match with the goals scored by each team as shown.
