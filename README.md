@@ -505,6 +505,14 @@ Barack Obama
     JOIN movie ON casting.movieid=movie.id
     WHERE actor.name='Harrison Ford' AND casting.ord!=1
 
+#### 10. List the films together with the leading star for all 1962 films.
+
+    SELECT movie.title, actor.name
+    FROM casting JOIN actor ON casting.actorid=actor.id
+    JOIN movie ON casting.movieid=movie.id
+    WHERE movie.yr=1962 AND casting.ord=1
+
+#### 11. Which were the busiest years for 'Rock Hudson', show the year and the number of movies he made each year for any year in which he made more than 2 movies.
 
 
 
