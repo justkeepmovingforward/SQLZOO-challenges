@@ -411,6 +411,10 @@ Barack Obama
 
 #### 10. Show the stadium and the number of goals scored in each stadium.
 
+    SELECT stadium, COUNT(1)
+    FROM game JOIN goal ON matchid=id
+    GROUP BY stadium
+
 #### 11. For every match involving 'POL', show the matchid, date and the number of goals scored.
 
 #### 12. For every match where 'GER' scored, show matchid, match date and the number of goals scored by 'GER'
