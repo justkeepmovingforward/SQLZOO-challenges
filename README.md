@@ -18,7 +18,7 @@ This repository contains my solutions and notes from working through the SQLZOO 
 
 ### SELECT basics
 
-#### 1️.  Show the population of Germany.
+#### 1.  Show the population of Germany.
 
     SELECT population
     FROM world
@@ -39,7 +39,7 @@ This repository contains my solutions and notes from working through the SQLZOO 
 
 ### SELECT from World
 
-#### 1️.  Show the name, continent and population of all countries.
+#### 1.  Show the name, continent and population of all countries.
 
     SELECT name, continent, population 
     FROM world
