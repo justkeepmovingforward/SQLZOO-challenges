@@ -403,6 +403,10 @@ Barack Obama
 
 #### 8. Show the name of all players who scored a goal against Germany.
 
+    SELECT DISTINCT player
+    FROM game JOIN goal ON matchid = id 
+    WHERE ((team1='GER' AND team2!="GER") OR (team1!='GER' AND team2="GER")) AND teamid!="GER"
+
 #### 9. Show teamname and the total number of goals scored.
 
     SELECT teamname, COUNT(teamname)
