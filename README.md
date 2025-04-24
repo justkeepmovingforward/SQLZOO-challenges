@@ -500,6 +500,12 @@ Barack Obama
 
 #### 9. List the films where 'Harrison Ford' has appeared - but not in the starring role.
 
+    SELECT movie.title
+    FROM casting JOIN actor ON casting.actorid=actor.id
+    JOIN movie ON casting.movieid=movie.id
+    WHERE actor.name='Harrison Ford' AND casting.ord!=1
+
+
 
 
 ### Using Null
