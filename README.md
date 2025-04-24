@@ -484,7 +484,21 @@ Barack Obama
     FROM actor JOIN casting ON actor.id=casting.actorid
     WHERE movieid=11768
 
+#### 7. Obtain the cast list for the film 'Alien'
 
+    SELECT actor.name
+    FROM casting JOIN actor ON actor.id=casting.actorid
+    JOIN movie ON casting.movieid=movie.id
+    WHERE title="Alien"
+
+#### 8. List the films in which 'Harrison Ford' has appeared
+
+    SELECT movie.title
+    FROM casting JOIN actor ON casting.actorid=actor.id
+    JOIN movie ON casting.movieid=movie.id
+    WHERE actor.name='Harrison Ford'
+
+#### 9. List the films where 'Harrison Ford' has appeared - but not in the starring role.
 
 
 
