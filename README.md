@@ -445,8 +445,26 @@ Barack Obama
     LEFT JOIN goal ON matchid = id
     GROUP BY mdate, matchid, team1, team2
 
-
 ### More JOIN operations
+
+#### 1. List the films where the yr is 1962.
+
+    SELECT id, title
+    FROM movie
+    WHERE yr=1962
+
+#### 2. Give year of 'Citizen Kane'.
+
+    SELECT yr
+    FROM movie
+    WHERE title="Citizen Kane"
+
+
+
+
+
+
+
 ### Using Null
 ### Self join
 
