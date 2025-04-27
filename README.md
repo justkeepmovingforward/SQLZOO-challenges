@@ -613,5 +613,19 @@ WHERE dept IS NULL
 
 #### 3. Give the id and the name for the stops on the '4' 'LRT' service.
 
+    SELECT stops.id, stops.name
+    FROM stops JOIN route ON stops.id=route.stop
+    WHERE route.num="4" AND route.company="LRT"
+
+#### 4. Add a HAVING clause to restrict the output to these two routes.
+
+    SELECT company, num, COUNT(*)
+    FROM route WHERE stop=149 OR stop=53
+    GROUP BY company, num
+    HAVING COUNT(*)=2
+
+
+
+
 
 
