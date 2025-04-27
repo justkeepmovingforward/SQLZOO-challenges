@@ -515,7 +515,7 @@ Barack Obama
 #### 11. Which were the busiest years for 'Rock Hudson', show the year and the number of movies he made each year for any year in which he made more than 2 movies.
 
     SELECT yr,COUNT(title) FROM
-      movie JOIN casting ON movie.id=movieid
+    movie JOIN casting ON movie.id=movieid
             JOIN actor   ON actorid=actor.id
     WHERE name='Rock Hudson'
     GROUP BY yr
@@ -523,6 +523,12 @@ Barack Obama
 
 #### 12. List the film title and the leading actor for all of the films 'Julie Andrews' played in.
 
+    SELECT DISTINCT movie.title, actor.name
+    FROM casting JOIN movie ON casting.movieid=movie.id JOIN actor ON casting.actorid=actor.id
+    WHERE movie.id IN (10016,
+    12354,12497,12766,13846,15145,15476,16870,17117,17445,17765,18270,20136,20136,20180,20181,20509,20627,21023,21154,21171,21483) AND casting.ord=1
+
+#### 13. 
 
 
 
