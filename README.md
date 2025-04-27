@@ -578,7 +578,16 @@ WHERE dept IS NULL
     FROM teacher RIGHT JOIN dept ON teacher.dept=dept.id
     GROUP BY dept.name
 
-#### 9. 
+#### 9. Use CASE to show the name of each teacher followed by 'Sci' if the teacher is in dept 1 or 2 and 'Art' otherwise.
+
+    SELECT teacher.name,
+    CASE WHEN teacher.dept IN(1) OR teacher.dept IN (2)
+    THEN "Sci"
+    ELSE "Art"
+    END
+    FROM teacher
+
+#### 10. 
 
 
 
