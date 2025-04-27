@@ -567,7 +567,7 @@ WHERE dept IS NULL
     SELECT teacher.name, COALESCE(dept.name,"None")
     FROM teacher LEFT JOIN dept on teacher.dept=dept.id
 
-#### 7. 
+#### 7. Use COUNT to show the number of teachers and the number of mobile phones.
 
 
 
